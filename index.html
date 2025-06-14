@@ -2,93 +2,231 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🔥 Free AI Roast Me - Hilariously Brutal!</title>
-  <meta name="description" content="Let AI roast you. Enter your name or upload a pic and get roasted by a savage robot! 😂">
-  <meta name="keywords" content="AI roast me, free AI roast, roast generator, funny AI, GPT insult, meme tool">
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Free AI Roast Me Generator 😂" />
-  <meta property="og:description" content="Type your name or story and get roasted by AI. It’s hilarious. Try now!" />
-  <meta property="og:image" content="https://yourdomain.com/ai-roast-thumb.jpg" />
-  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🔥 Free AI Roast Me - Hilarious AI Roasts Generated Instantly</title>
+  <meta name="description" content="Get instantly roasted by AI! Generate savage and funny AI roasts and share them with friends on social media. Viral & free AI Roast Generator." />
+  <meta name="keywords" content="AI roast, free roast generator, funny roasts, viral roasts, AI jokes, share roast" />
+  <meta name="author" content="Skyboss878" />
+  <meta property="og:title" content="🔥 Free AI Roast Me" />
+  <meta property="og:description" content="Get instantly roasted by AI! Generate savage and funny AI roasts and share them with friends on social media." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ai-roast.netlify.app" />
+  <meta property="og:image" content="https://ai-roast.netlify.app/roast-preview.png" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="🔥 Free AI Roast Me" />
+  <meta name="twitter:description" content="Generate savage AI roasts instantly & share with friends! Viral free roast generator." />
+  <meta name="twitter:image" content="https://ai-roast.netlify.app/roast-preview.png" />
 
-  <!-- ✅ Google AdSense (Your ID added) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9617384885958661" crossorigin="anonymous"></script>
-
-  <!-- ✅ Puter AI -->
   <script src="https://js.puter.com/v2/"></script>
 
   <style>
+    /* Dark background with neon accent */
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #fff;
-      padding: 20px;
-      max-width: 600px;
-      margin: auto;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #e0e6f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 3rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
     }
     h1 {
-      color: #e60000;
-      text-align: center;
+      font-size: 3rem;
+      color: #ff4081;
+      text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+      margin-bottom: 0;
     }
-    input, button {
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
+    p {
+      font-size: 1.25rem;
+      color: #b0c4de;
+      margin-top: 0.25rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+    button {
+      background: #ff4081;
+      border: none;
+      border-radius: 40px;
+      padding: 0.85rem 3rem;
+      font-size: 1.25rem;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 8px #ff4081;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    button:hover {
+      background: #e73370;
+      box-shadow: 0 0 16px #ff70a6;
+    }
+    #roast {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      background: rgba(255, 64, 129, 0.15);
+      box-shadow: 0 0 10px #ff4081;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: text;
+      white-space: pre-wrap;
+      font-weight: 700;
+    }
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .share-buttons button,
+    .share-buttons a button {
+      padding: 0.6rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 700;
       font-size: 1rem;
+      box-shadow: 0 0 6px #ff4081;
+      background: #161b22;
+      color: #ff4081;
+      border: 2px solid #ff4081;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    #roastBox {
-      display: none;
-      background-color: #ffeeee;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
+    .share-buttons button:hover,
+    .share-buttons a button:hover {
+      background: #ff4081;
+      color: white;
+      box-shadow: 0 0 20px #ff4081;
+      border-color: #ff70a6;
     }
-    #roastImage {
-      margin-top: 20px;
-      text-align: center;
+    .share-buttons svg {
+      fill: #ff4081;
+      width: 20px;
+      height: 20px;
+    }
+    .share-buttons a {
+      text-decoration: none;
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      #roast {
+        font-size: 1.2rem;
+        padding: 1rem 1rem;
+      }
+      button, .share-buttons button, .share-buttons a button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+      }
+      .share-buttons {
+        gap: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
+  <h1>🔥 Get Roasted by AI</h1>
+  <p>Click below to get a savage AI roast instantly, then share with your friends!</p>
 
-  <h1>🔥 AI Roast Me Generator</h1>
-  <p>Enter your name or a story about yourself, and our savage AI will roast you instantly:</p>
+  <button id="roastBtn">🔥 Roast Me</button>
 
-  <input type="text" id="inputText" placeholder="e.g. I still live with my mom...">
-  <button onclick="generateRoast()">Roast Me with AI</button>
+  <div id="roast" aria-live="polite" role="region" aria-label="AI generated roast"></div>
 
-  <div id="roastBox"></div>
-  <div id="roastImage"></div>
+  <div class="share-buttons" id="share" style="display:none;">
+    <button id="copyBtn" title="Copy roast to clipboard">📋 Copy Roast</button>
 
-  <!-- ✅ AdSense Ad Unit -->
-  <ins class="adsbygoogle"
-       style="display:block; text-align:center;"
-       data-ad-client="ca-pub-9617384885958661"
-       data-ad-slot="1234567890"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
+    <a id="tweetBtn" href="#" target="_blank" rel="noopener noreferrer" title="Share on Twitter">
+      <button>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.954 4.569c-.885.39-1.83.654-2.825.775a4.93 4.93 0 0 0 2.163-2.723 9.87 9.87 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.38 4.482A13.957 13.957 0 0 1 1.671 3.15a4.822 4.822 0 0 0-.664 2.475 4.917 4.917 0 0 0 2.188 4.096 4.902 4.902 0 0 1-2.228-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.902 4.902 0 0 1-2.224.084 4.923 4.923 0 0 0 4.6 3.417 9.867 9.867 0 0 1-6.102 2.104c-.396 0-.787-.023-1.17-.067a13.945 13.945 0 0 0 7.557 2.213c9.054 0 14.001-7.496 14.001-13.986 0-.21 0-.423-.015-.633A9.936 9.936 0 0 0 24 4.59z"/></svg> Twitter
+      </button>
+    </a>
+
+    <a id="fbBtn" href="#" target="_blank" rel="noopener noreferrer" title="Share on Facebook">
+      <button>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.351C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.243l-1.918.001c-1.504 0-1.795.715-1.795 1.764v2.313h3.587l-.467 3.622h-3.12V24h6.116c.724 0 1.324-.6 1.324-1.324V1.325C24 .6 23.4 0 22.675 0z"/></svg> Facebook
+      </button>
+    </a>
+
+    <a id="instaBtn" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" title="Instagram homepage">
+      <button>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5a3.75 3.75 0 0 0 3.75-3.75v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm4.75-.875a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25z"/></svg> Instagram
+      </button>
+    </a>
+
+    <a id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer" title="Share on WhatsApp">
+      <button>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M.057 24l1.687-6.163a11.916 11.916 0 0 1-1.64-6.19C.104 5.355 5.48 0 12.058 0c3.218 0 6.238 1.253 8.492 3.507a11.82 11.82 0 0 1 3.506 8.485c-.003 6.578-5.433 11.954-12.01 11.954a11.88 11.88 0 0 1-6.31-1.64L.057 24zm6.597-3.807c1.68.995 3.276 1.591 5.403 1.592 5.448 0 9.88-4.434 9.885-9.882.002-2.64-1.03-5.117-2.903-6.988-1.871-1.87-4.35-2.9-6.994-2.9-5.45 0-9.884 4.432-9.884 9.88a9.865 9.865 0 0 0 1.587 5.396l-.999 3.648 3.613-.95zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.296-.148-1.758-.868-2.03-.967-.273-.099-.47-.148-.67.148-.198.297-.767.966-.94 1.164-.173.198-.347.223-.643.074-.296-.148-1.253-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.445-.52.149-.174.198-.297.297-.495.1-.198.05-.371-.025-.52-.074-.148-.67-1.612-.916-2.205-.242-.579-.487-.5-.67-.51l-.57-.01c-.198 0-.52.074-.792.371s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.148.198 2.095 3.2 5.076 4.487.709.306 1.262.488 1.694.624.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg> WhatsApp
+      </button>
+    </a>
+
+    <a id="telegramBtn" href="#" target="_blank" rel="noopener noreferrer" title="Share on Telegram">
+      <button>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm5.375 8.57l-1.36 6.41c-.103.46-.37.57-.75.36l-2.08-1.54-1.003.97c-.11.11-.2.2-.41.2l.15-2.14 3.89-3.52c.17-.15-.04-.24-.26-.1l-4.81 3.02-2.07-.65c-.45-.14-.46-.45.093-.67l8.13-3.13c.38-.14.71.09.59.67z"/></svg> Telegram
+      </button>
+    </a>
+  </div>
+
   <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    let roastText = "";
+    const roastBtn = document.getElementById("roastBtn");
+    const roastDiv = document.getElementById("roast");
+    const shareDiv = document.getElementById("share");
+    const copyBtn = document.getElementById("copyBtn");
+    const tweetBtn = document.getElementById("tweetBtn");
+    const fbBtn = document.getElementById("fbBtn");
+    const instaBtn = document.getElementById("instaBtn");
+    const whatsappBtn = document.getElementById("whatsappBtn");
+    const telegramBtn = document.getElementById("telegramBtn");
 
-  <!-- ✅ Roast Generation Script -->
-  <script>
-    async function generateRoast() {
-      const input = document.getElementById('inputText').value.trim();
-      const roastBox = document.getElementById('roastBox');
-      roastBox.innerHTML = "Generating roast... 🔥";
-      roastBox.style.display = 'block';
+    roastBtn.addEventListener("click", () => {
+      roastBtn.disabled = true;
+      roastBtn.textContent = "Roasting... 🔥";
+      puter.ai.chat("Roast me")
+        .then(response => {
+          roastText = response.trim();
+          roastDiv.textContent = roastText;
+          shareDiv.style.display = "flex";
+          roastBtn.disabled = false;
+          roastBtn.textContent = "🔥 Roast Me";
+          updateSocialLinks();
+        })
+        .catch(() => {
+          roastDiv.textContent = "Oops, something went wrong! Try again.";
+          roastBtn.disabled = false;
+          roastBtn.textContent = "🔥 Roast Me";
+        });
+    });
 
-      try {
-        const response = await puter.ai.chat(`Roast this person: ${input}`);
-        roastBox.innerHTML = `<strong>${input || "You"}:</strong> ${response}`;
-      } catch (err) {
-        roastBox.innerHTML = "⚠️ AI roast failed. Try again.";
-        console.error(err);
-      }
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(roastText).then(() => {
+        alert("🔥 Roast copied to clipboard! Now share it!");
+      });
+    });
+
+    function updateSocialLinks() {
+      const encodedRoast = encodeURIComponent(roastText + " #AIRoastMe #RoastBot");
+      // Twitter
+      tweetBtn.href = `https://twitter.com/intent/tweet?text=${encodedRoast}`;
+      // Facebook
+      fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=https://ai-roast.netlify.app&quote=${encodedRoast}`;
+      // Instagram - no direct share URL; fallback to Instagram homepage
+      instaBtn.href = "https://www.instagram.com/";
+      // WhatsApp
+      whatsappBtn.href = `https://api.whatsapp.com/send?text=${encodedRoast}%20https://ai-roast.netlify.app`;
+      // Telegram
+      telegramBtn.href = `https://t.me/share/url?url=https://ai-roast.netlify.app&text=${encodedRoast}`;
     }
   </script>
-
 </body>
 </html>
