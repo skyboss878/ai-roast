@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔥 Free AI Roast Me - Hilariously Brutal!</title>
+  <meta name="description" content="Let AI roast you. Enter your name or upload a pic and get roasted by a savage robot! 😂">
+  <meta name="keywords" content="AI roast me, free AI roast, roast generator, funny AI, GPT insult, meme tool">
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Free AI Roast Me Generator 😂" />
+  <meta property="og:description" content="Type your name or story and get roasted by AI. It’s hilarious. Try now!" />
+  <meta property="og:image" content="https://yourdomain.com/ai-roast-thumb.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ✅ Google AdSense (Your ID added) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9617384885958661" crossorigin="anonymous"></script>
+
+  <!-- ✅ Puter AI -->
+  <script src="https://js.puter.com/v2/"></script>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      color: #e60000;
+      text-align: center;
+    }
+    input, button {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+    #roastBox {
+      display: none;
+      background-color: #ffeeee;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    #roastImage {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔥 AI Roast Me Generator</h1>
+  <p>Enter your name or a story about yourself, and our savage AI will roast you instantly:</p>
+
+  <input type="text" id="inputText" placeholder="e.g. I still live with my mom...">
+  <button onclick="generateRoast()">Roast Me with AI</button>
+
+  <div id="roastBox"></div>
+  <div id="roastImage"></div>
+
+  <!-- ✅ AdSense Ad Unit -->
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-client="ca-pub-9617384885958661"
+       data-ad-slot="1234567890"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <!-- ✅ Roast Generation Script -->
+  <script>
+    async function generateRoast() {
+      const input = document.getElementById('inputText').value.trim();
+      const roastBox = document.getElementById('roastBox');
+      roastBox.innerHTML = "Generating roast... 🔥";
+      roastBox.style.display = 'block';
+
+      try {
+        const response = await puter.ai.chat(`Roast this person: ${input}`);
+        roastBox.innerHTML = `<strong>${input || "You"}:</strong> ${response}`;
+      } catch (err) {
+        roastBox.innerHTML = "⚠️ AI roast failed. Try again.";
+        console.error(err);
+      }
+    }
+  </script>
+
+</body>
+</html>
